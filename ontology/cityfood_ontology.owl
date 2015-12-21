@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/asma/ontologies/2014/5/untitled-ontology-145"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/asma/ontologies/2014/5/untitled-ontology-145">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://gaia.fdi.ucm.es/ontologies/restaurant.owl</Import>
+    <Declaration>
+        <Class IRI="#Dariy_free"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dinner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Halal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lactose_free"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lunch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non_Gluten"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nonvegan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vegan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wheat_Free"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_calories"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Beef_Kabab"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chicken_Kabab"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chicken_Roaring"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dariy_free"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Falafel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fisk_&amp;_skaldjursgryta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gluten_free"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Halal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lactose_free"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lunch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Non_vegan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salt_och_Brygga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shawarma"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#THE_MIDDLE_EAST_&amp;_ZUZU_RESTAURANT_&amp;_NIGHTCLUB___472_-_480_MASSACHUSETTS_AVENUE,___CENTRAL_SQUARE_-_CAMBRIDGE,_MA__02139"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vegan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wheat_free"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mrsbrown"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Dariy_free"/>
+        <Class IRI="#Lactose_free"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Non_Gluten"/>
+        <Class IRI="#Wheat_Free"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Dariy_free"/>
+        <Class IRI="#Lunch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dinner"/>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Meal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Halal"/>
+        <Class IRI="#Nonvegan"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Halal"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#is"/>
+            <Class IRI="#Nonvegan"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lactose_free"/>
+        <Class IRI="#Lunch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lunch"/>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Meal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non_Gluten"/>
+        <Class IRI="#Lunch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nonvegan"/>
+        <Class IRI="#Lunch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nonvegan"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is"/>
+            <Class IRI="#Halal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vegan"/>
+        <Class IRI="#Lunch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wheat_Free"/>
+        <Class IRI="#Lunch"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#AsianCuisine"/>
+        <NamedIndividual IRI="#Beef_Kabab"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Cuisine"/>
+        <NamedIndividual IRI="#Beef_Kabab"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Dish"/>
+        <NamedIndividual IRI="#Beef_Kabab"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#AsianCuisine"/>
+        <NamedIndividual IRI="#Chicken_Kabab"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Cuisine"/>
+        <NamedIndividual IRI="#Chicken_Kabab"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Dish"/>
+        <NamedIndividual IRI="#Chicken_Kabab"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Cuisine"/>
+        <NamedIndividual IRI="#Chicken_Roaring"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dariy_free"/>
+        <NamedIndividual IRI="#Dariy_free"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lactose_free"/>
+        <NamedIndividual IRI="#Dariy_free"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#AsianCuisine"/>
+        <NamedIndividual IRI="#Falafel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Cuisine"/>
+        <NamedIndividual IRI="#Falafel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Dish"/>
+        <NamedIndividual IRI="#Falafel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Cuisine"/>
+        <NamedIndividual IRI="#Fisk_&amp;_skaldjursgryta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Non_Gluten"/>
+        <NamedIndividual IRI="#Gluten_free"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Wheat_Free"/>
+        <NamedIndividual IRI="#Gluten_free"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Halal"/>
+        <NamedIndividual IRI="#Halal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dariy_free"/>
+        <NamedIndividual IRI="#Lactose_free"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lactose_free"/>
+        <NamedIndividual IRI="#Lactose_free"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lunch"/>
+        <NamedIndividual IRI="#Lunch"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Restaurant"/>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Nonvegan"/>
+        <NamedIndividual IRI="#Non_vegan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Restaurant"/>
+        <NamedIndividual IRI="#Salt_och_Brygga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#AsianCuisine"/>
+        <NamedIndividual IRI="#Shawarma"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Cuisine"/>
+        <NamedIndividual IRI="#Shawarma"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Dish"/>
+        <NamedIndividual IRI="#Shawarma"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/address.owl#Address"/>
+        <NamedIndividual IRI="#THE_MIDDLE_EAST_&amp;_ZUZU_RESTAURANT_&amp;_NIGHTCLUB___472_-_480_MASSACHUSETTS_AVENUE,___CENTRAL_SQUARE_-_CAMBRIDGE,_MA__02139"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vegan"/>
+        <NamedIndividual IRI="#Vegan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Non_Gluten"/>
+        <NamedIndividual IRI="#Wheat_free"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Wheat_Free"/>
+        <NamedIndividual IRI="#Wheat_free"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Restaurant"/>
+        <NamedIndividual IRI="#mrsbrown"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#Dariy_free"/>
+        <NamedIndividual IRI="#Lactose_free"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Gluten_free"/>
+        <NamedIndividual IRI="#Wheat_free"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Halal"/>
+        <NamedIndividual IRI="#Non_vegan"/>
+    </SameIndividual>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Halal"/>
+        <NamedIndividual IRI="#Vegan"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Non_vegan"/>
+        <NamedIndividual IRI="#Vegan"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#meals"/>
+        <NamedIndividual IRI="#Beef_Kabab"/>
+        <NamedIndividual IRI="#Lunch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <NamedIndividual IRI="#Beef_Kabab"/>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is"/>
+        <NamedIndividual IRI="#Beef_Kabab"/>
+        <NamedIndividual IRI="#Dariy_free"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is"/>
+        <NamedIndividual IRI="#Beef_Kabab"/>
+        <NamedIndividual IRI="#Halal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <NamedIndividual IRI="#Chicken_Kabab"/>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is"/>
+        <NamedIndividual IRI="#Chicken_Kabab"/>
+        <NamedIndividual IRI="#Halal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is"/>
+        <NamedIndividual IRI="#Chicken_Kabab"/>
+        <NamedIndividual IRI="#Gluten_free"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is"/>
+        <NamedIndividual IRI="#Chicken_Kabab"/>
+        <NamedIndividual IRI="#Dariy_free"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#meals"/>
+        <NamedIndividual IRI="#Chicken_Roaring"/>
+        <NamedIndividual IRI="#Lunch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <NamedIndividual IRI="#Chicken_Roaring"/>
+        <NamedIndividual IRI="#Salt_och_Brygga"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is"/>
+        <NamedIndividual IRI="#Chicken_Roaring"/>
+        <NamedIndividual IRI="#Non_vegan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#meals"/>
+        <NamedIndividual IRI="#Falafel"/>
+        <NamedIndividual IRI="#Lunch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <NamedIndividual IRI="#Falafel"/>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is"/>
+        <NamedIndividual IRI="#Falafel"/>
+        <NamedIndividual IRI="#Vegan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <NamedIndividual IRI="#Fisk_&amp;_skaldjursgryta"/>
+        <NamedIndividual IRI="#mrsbrown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#is"/>
+        <NamedIndividual IRI="#Fisk_&amp;_skaldjursgryta"/>
+        <NamedIndividual IRI="#Non_vegan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#meals"/>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+        <NamedIndividual IRI="#Lunch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#meals"/>
+        <NamedIndividual IRI="#Shawarma"/>
+        <NamedIndividual IRI="#Lunch"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <NamedIndividual IRI="#Shawarma"/>
+        <NamedIndividual IRI="#Halal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <NamedIndividual IRI="#Shawarma"/>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#address"/>
+        <NamedIndividual IRI="#THE_MIDDLE_EAST_&amp;_ZUZU_RESTAURANT_&amp;_NIGHTCLUB___472_-_480_MASSACHUSETTS_AVENUE,___CENTRAL_SQUARE_-_CAMBRIDGE,_MA__02139"/>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#has"/>
+        <NamedIndividual IRI="#mrsbrown"/>
+        <NamedIndividual IRI="#Fisk_&amp;_skaldjursgryta"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#price"/>
+        <NamedIndividual IRI="#Falafel"/>
+        <Literal datatypeIRI="&xsd;int">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#country"/>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+        <Literal datatypeIRI="&xsd;string">sweden</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#region"/>
+        <NamedIndividual IRI="#Middle_East_Restaurant"/>
+        <Literal datatypeIRI="&xsd;string">Malmo  Skane</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#country"/>
+        <NamedIndividual IRI="#Shawarma"/>
+        <Literal datatypeIRI="&xsd;string">Sweden</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#dish_aviable_at"/>
+        <Class IRI="#Lunch"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_calories"/>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Cuisine"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_calories"/>
+        <Class IRI="http://gaia.fdi.ucm.es/ontologies/restaurant.owl#Meal"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_calories"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

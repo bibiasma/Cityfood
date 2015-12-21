@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://gaia.fdi.ucm.es/ontologies/restaurant.owl" uri="http://wise.vub.ac.be/ontologies/restaurant.owl"/>
+    <uri id="Imports Wizard Entry" name="http://webprotege.stanford.edu/project/BpdKJvalwucmvFOSKmKZm5" uri="restaurant-2-ontologies-owl-REVISION-20/root-ontology.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1403204950611" name="http://www.semanticweb.org/asma/ontologies/2014/5/untitled-ontology-145" uri="cityfood_ontology.owl"/>
+    </group>
+</catalog>
